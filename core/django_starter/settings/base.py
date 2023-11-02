@@ -50,15 +50,15 @@ WSGI_APPLICATION = "core.django_starter.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_starter',
-        'USER': 'django_starter',
-        'PASSWORD': 'django_starter',
-        'HOST': 'localhost',
-        'PORT': '9432',
-        'ATOMIC_REQUESTS': True,
-        'CONN_MAX_AGE': 0,
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "django_starter",
+        "USER": "django_starter",
+        "PASSWORD": "django_starter",
+        "HOST": "localhost",
+        "PORT": "9432",
+        "ATOMIC_REQUESTS": True,
+        "CONN_MAX_AGE": 0,
     }
 }
 
