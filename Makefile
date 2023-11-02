@@ -2,6 +2,11 @@
 install:
 	poetry install
 
+.PHONY: lint
+check:
+	poetry run ruff format .
+	poetry run ruff check . --fix
+
 .PHONY: migrate
 migrate:
 	poetry run python -m core.manage migrate $(filter-out $@,$(MAKECMDGOALS))
