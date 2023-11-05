@@ -52,9 +52,9 @@ WSGI_APPLICATION = "core.django_starter.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "django_starter",
-        "USER": "django_starter",
-        "PASSWORD": "django_starter",
+        "NAME": "django_app",
+        "USER": "django",
+        "PASSWORD": "django",
         "HOST": "localhost",
         "PORT": "9432",
         "ATOMIC_REQUESTS": True,

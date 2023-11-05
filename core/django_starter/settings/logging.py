@@ -4,22 +4,23 @@ LOGGING = {
     "formatters": {
         "standard": {"format": "%(asctime)s %(levelname)s %(name)s %(message)s"},
     },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'standard',
-            'filters': [],
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "formatter": "standard",
+            "filters": [],
         },
     },
-    'loggers': {
+    "loggers": {
         logger_name: {
-            'level': 'WARNING',
-            'propagate': True,
-        } for logger_name in ('django', 'django.request', 'django.db.backends', 'django.template', 'cooking_core')
+            "level": "WARNING",
+            "propagate": True,
+        }
+        for logger_name in ("django", "django.request", "django.db.backends", "django.template", "cooking_core")
     },
-    'root': {
-        'level': 'DEBUG',
-        'handlers': ['console'],
-    }
+    "root": {
+        "level": "DEBUG",
+        "handlers": ["console"],
+    },
 }

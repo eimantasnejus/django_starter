@@ -29,4 +29,9 @@ superuser:
 
 .PHONY: test
 test:
-	poetry run pytest -v -rs -n auto --show-capture=no
+	poetry run pytest -v -rs -n auto --cov=core --cov-report=term-missing --cov-fail-under=80
+
+.PHONY: up-depenencies-only
+up-depenencies-only:
+	test -f .env || touch .env
+	docker-compose -f docker-compose.dev.yml up -d --build --force-recreate db
